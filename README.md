@@ -5,7 +5,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 ### Links
 
 - Solution URL: https://github.com/AdanQuijadaC/todo-app-main_byaqc
-- Live Site URL:
+- Live Site URL: https://todo-app-main-byaqc.vercel.app/
 
 ### Built with
 
