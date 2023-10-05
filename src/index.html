@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Todo app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/output.css">
+
+</head>
+
+<body class="font-body bg-[--Bg-one] min-w-[320px]">
+
+  <header class="h-[200px] bg-mobile bg-no-repeat bg-center bg-cover lg:bg-desktop lg:h-[300px]">
+    <div class="container flex w-full lg:w-[768px]">
+      <div class="flex w-[80%] mt-[2rem] mx-auto  justify-between items-baseline lg:mt-[5rem]">
+        <div class="flex">
+          <a href="">
+            <h1 class="text-[--Text-four] text-3xl uppercase tracking-[0.6rem] font-[700]">todo</h1>
+          </a>
+        </div>
+        <figure class="flex">
+          <img class="cursor-pointer theme-light" src="../images/icon-moon.svg" alt="">
+          <img class="cursor-pointer theme-dark" src="../images/icon-sun.svg" alt="">
+        </figure>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="h-[calc(100vh-200px)]  bg-[--Bg-one] lg:h-[calc(100vh-300px)]">
+    <div class="container flex w-full translate-y-[-7rem] lg:w-[768px]">
+      <div class="flex flex-col w-[80%] mx-auto gap-4">
+        <!-- TODO header -->
+        <div class="flex items-center justify-between relative  bg-[--Bg-two] p-5 rounded-lg" id="todo_header">
+
+          <div class="flex items-center w-full gap-4 ">
+            <div class="flex">
+              <div>
+                <div class="w-[1.5rem] h-[1.5rem] border-[1px] border-[--Text-two] rounded-[50%]">
+                </div>
+                <div class="hidden bg-gradient-to-b from-[#57ddff] to-[#c058f3] rounded-[50%] w-[1.5rem] h-[1.5rem]
+                  justify-center items-center">
+                  <img class="w-[50%]" src="../images/icon-check.svg" alt="">
+                </div>
+              </div>
+
+            </div>
+            <input class="outline-none w-full bg-[--Bg-two] placeholder:bg-[--Bg-two] text-[--Text-three]" type="text"
+              name="input_new" id="input_new" maxlength="55" placeholder="Create a new todo...">
+          </div>
+
+        </div>
+
+        <!-- TODO body -->
+        <div class="sm:  bg-[--Bg-two] max-h-[455px]  rounded-lg lg:rounded-b-[0px]" id="todo_list">
+
+          <!-- Dinamic TODO start -->
+
+          <!-- Dinamic TODO end -->
+          <!-- LIST footer -->
+          <div class="hidden flex justify-between p-5 lg:hidden" data-value="footer_list">
+            <p class="text-[--Text-two]">
+              <span data-count="items_left">0</span>
+              Items left
+            </p>
+            <p class="text-[--Text-two] hover:text-[--Text-three] cursor-pointer" data-action="completed">
+              Clear Completed
+            </p>
+          </div>
+        </div>
+        <!-- TODO footer -->
+        <div class="hidden bg-[--Bg-two] rounded-lg p-5 lg:mt-[-1rem] lg:rounded-t-[0px] lg:flex
+          lg:justify-between lg:hidden" data-value="footer_content">
+          <p class="hidden text-[--Text-two] lg:block">
+            <span data-count="items_left">0</span> Items left
+          </p>
+          <div class="flex justify-center gap-6 text-center font-bold">
+            <p class="cursor-pointer text-[--Text-one]" data-button="all">All</p>
+            <p class="cursor-pointer text-[--Text-two] hover:text-[--Text-three]" data-button="active">Active</p>
+            <p class="cursor-pointer text-[--Text-two] hover:text-[--Text-three]" data-button="completed">Completed</p>
+          </div>
+          <p class="hidden text-[--Text-two] hover:text-[--Text-three] cursor-pointer lg:block "
+            data-action="completed">
+            Clear Completed
+          </p>
+        </div>
+        <p class="hidden text-center text-[--Text-two] mt-5" data-value="footer_content">Drag and drop to reorder list
+        </p>
+      </div>
+
+
+    </div>
+  </main>
+  <script src="Sortable.min.js"></script>
+  <script src="theme.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+
+</html>
